@@ -5,7 +5,7 @@ const typeDefs = gql`
     payloads(
       find: PayloadsFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Payload]

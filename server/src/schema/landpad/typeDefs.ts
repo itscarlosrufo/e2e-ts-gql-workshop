@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    landpads(limit: Int, offset: Int): [Landpad]
+    landpads(limit: Int, offSet: Int): [Landpad]
     landpad(id: ID!): Landpad
   }
 

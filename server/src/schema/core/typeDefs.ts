@@ -5,21 +5,21 @@ const typeDefs = gql`
     cores(
       find: CoresFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Core]
     coresPast(
       find: CoresFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Core]
     coresUpcoming(
       find: CoresFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Core]

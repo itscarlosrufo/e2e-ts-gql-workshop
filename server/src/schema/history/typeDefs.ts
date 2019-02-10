@@ -5,7 +5,7 @@ const typeDefs = gql`
     histories(
       find: HistoryFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [History]

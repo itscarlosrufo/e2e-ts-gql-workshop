@@ -5,21 +5,21 @@ const typeDefs = gql`
     capsules(
       find: CapsulesFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Capsule]
     capsulesPast(
       find: CapsulesFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Capsule]
     capsulesUpcoming(
       find: CapsulesFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Capsule]

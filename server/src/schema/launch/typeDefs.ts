@@ -5,34 +5,34 @@ const typeDefs = gql`
     launches(
       find: LaunchFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Launch]
     launchesPast(
       find: LaunchFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Launch]
     launchesPastResult(
       find: LaunchFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): LaunchesPastResult
     launchesUpcoming(
       find: LaunchFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Launch]
     launch(id: ID!): Launch
-    launchLatest(offset: Int): Launch
-    launchNext(offset: Int): Launch
+    launchLatest(offSet: Int): Launch
+    launchNext(offSet: Int): Launch
   }
 
   extend type History {

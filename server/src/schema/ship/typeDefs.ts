@@ -5,7 +5,7 @@ const typeDefs = gql`
     ships(
       find: ShipsFind
       limit: Int
-      offset: Int
+      offSet: Int
       order: String
       sort: String
     ): [Ship]

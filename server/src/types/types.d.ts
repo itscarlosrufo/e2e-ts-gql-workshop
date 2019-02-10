@@ -1101,7 +1101,7 @@ export interface CapsulesQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1112,7 +1112,7 @@ export interface CapsulesPastQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1123,7 +1123,7 @@ export interface CapsulesUpcomingQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1137,7 +1137,7 @@ export interface CoresQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1148,7 +1148,7 @@ export interface CoresPastQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1159,7 +1159,7 @@ export interface CoresUpcomingQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1171,7 +1171,7 @@ export interface CoreQueryArgs {
 export interface DragonsQueryArgs {
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 }
 export interface DragonQueryArgs {
   id: string;
@@ -1181,7 +1181,7 @@ export interface HistoriesQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1193,7 +1193,7 @@ export interface HistoryQueryArgs {
 export interface LandpadsQueryArgs {
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 }
 export interface LandpadQueryArgs {
   id: string;
@@ -1203,7 +1203,7 @@ export interface LaunchesQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1214,7 +1214,7 @@ export interface LaunchesPastQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1225,7 +1225,7 @@ export interface LaunchesPastResultQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1236,7 +1236,7 @@ export interface LaunchesUpcomingQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1246,15 +1246,15 @@ export interface LaunchQueryArgs {
   id: string;
 }
 export interface LaunchLatestQueryArgs {
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 }
 export interface LaunchNextQueryArgs {
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 }
 export interface LaunchpadsQueryArgs {
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 }
 export interface LaunchpadQueryArgs {
   id: string;
@@ -1264,7 +1264,7 @@ export interface MissionsQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 }
 export interface MissionQueryArgs {
   id: string;
@@ -1274,7 +1274,7 @@ export interface PayloadsQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1286,7 +1286,7 @@ export interface PayloadQueryArgs {
 export interface RocketsQueryArgs {
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 }
 export interface RocketQueryArgs {
   id: string;
@@ -1296,7 +1296,7 @@ export interface ShipsQueryArgs {
 
   limit?: Maybe<number>;
 
-  offset?: Maybe<number>;
+  offSet?: Maybe<number>;
 
   order?: Maybe<string>;
 
@@ -1474,7 +1474,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1491,7 +1491,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1508,7 +1508,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1539,7 +1539,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1556,7 +1556,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1573,7 +1573,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1597,7 +1597,7 @@ export namespace QueryResolvers {
   export interface DragonsArgs {
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
   }
 
   export type DragonResolver<
@@ -1619,7 +1619,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1643,7 +1643,7 @@ export namespace QueryResolvers {
   export interface LandpadsArgs {
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
   }
 
   export type LandpadResolver<
@@ -1665,7 +1665,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1682,7 +1682,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1699,7 +1699,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1716,7 +1716,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1738,7 +1738,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, LaunchLatestArgs>;
   export interface LaunchLatestArgs {
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
   }
 
   export type LaunchNextResolver<
@@ -1747,7 +1747,7 @@ export namespace QueryResolvers {
     Context = MyContext
   > = Resolver<R, Parent, Context, LaunchNextArgs>;
   export interface LaunchNextArgs {
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
   }
 
   export type LaunchpadsResolver<
@@ -1758,7 +1758,7 @@ export namespace QueryResolvers {
   export interface LaunchpadsArgs {
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
   }
 
   export type LaunchpadResolver<
@@ -1780,7 +1780,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
   }
 
   export type MissionResolver<
@@ -1802,7 +1802,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 
@@ -1831,7 +1831,7 @@ export namespace QueryResolvers {
   export interface RocketsArgs {
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
   }
 
   export type RocketResolver<
@@ -1853,7 +1853,7 @@ export namespace QueryResolvers {
 
     limit?: Maybe<number>;
 
-    offset?: Maybe<number>;
+    offSet?: Maybe<number>;
 
     order?: Maybe<string>;
 

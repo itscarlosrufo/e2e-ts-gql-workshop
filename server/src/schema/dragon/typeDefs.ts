@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 const typeDefs = gql`
   extend type Query {
-    dragons(limit: Int, offset: Int): [Dragon]
+    dragons(limit: Int, offSet: Int): [Dragon]
     dragon(id: ID!): Dragon
   }
 
