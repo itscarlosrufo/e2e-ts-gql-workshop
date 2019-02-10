@@ -1,5 +1,7 @@
+import { QueryResolvers } from '../../types/types';
+
 const collection = 'rocket';
-const Query = {
+const Query: QueryResolvers.Resolvers = {
   rockets: async (obj, { limit, offset }, context) => {
     const data = await context.db
       .collection(collection)
