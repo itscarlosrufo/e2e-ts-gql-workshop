@@ -1,5 +1,0 @@
-const parseCores = core => ({ ...core, id: core.core_serial });
-
-module.exports = {
-  parseCores
-};
