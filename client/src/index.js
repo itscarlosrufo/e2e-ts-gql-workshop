@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { ApolloProvider } from 'react-apollo-hooks';
 import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-boost';
-import App from './app/App';
+const App = React.lazy(() => import('./app/App'));
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000'
