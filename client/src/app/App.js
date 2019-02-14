@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import gql from 'graphql-tag';
-import { useQuery } from 'react-apollo-hooks';
+// import gql from 'graphql-tag';
+// import { useQuery } from 'react-apollo-hooks';
+import useFetch from 'fetch-suspense';
 
 export default function App() {
-  const {
-    data: { launchesPast }
-  } = useQuery(query);
+  const launchesPast = useFetch('https://api.spacex.land/rest/launches-past');
+  // const {
+  //   data: { launchesPastGraphQL }
+  // } = useQuery(query);
+  console.log('launchesPast: ', launchesPast);
 
   return (
     <React.Fragment>
@@ -21,14 +24,14 @@ export default function App() {
   );
 }
 
-const query = gql`
-  query getLaunches {
-    launchesPast {
-      mission_name
-      details
-      links {
-        flickr_images
-      }
-    }
-  }
-`;
+// const query = gql`
+//   query getLaunches {
+//     launchesPast {
+//       mission_name
+//       details
+//       links {
+//         flickr_images
+//       }
+//     }
+//   }
+// `;
