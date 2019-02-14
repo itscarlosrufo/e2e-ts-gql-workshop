@@ -297,11 +297,31 @@ export namespace GetLaunches {
     details: Maybe<string>;
 
     links: Maybe<Links>;
+
+    rocket: Maybe<Rocket>;
+
+    ships: Maybe<(Maybe<Ships>)[]>;
   };
 
   export type Links = {
     __typename?: "LaunchLinks";
 
     flickr_images: Maybe<(Maybe<string>)[]>;
+  };
+
+  export type Rocket = {
+    __typename?: "LaunchRocket";
+
+    name: Maybe<string>;
+  };
+
+  export type Ships = {
+    __typename?: "Ship";
+
+    name: Maybe<string>;
+
+    port: Maybe<string>;
+
+    image: Maybe<string>;
   };
 }
