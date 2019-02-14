@@ -13,11 +13,20 @@ export default function App() {
 
   return (
     <React.Fragment>
-      {launchesPast.map(({ mission_name, details, links }) => (
+      {launchesPast.map(({ mission_name, details, links, rocket, ships }) => (
         <div key={String(mission_name)}>
-          <h3>🛰 {mission_name}</h3>
+          <h3>
+            🛰 {mission_name} 🚀 {rocket.rocket_name}
+          </h3>
           <p>{details}</p>
           <img src={links.flickr_images[0]} width="200" />
+          {/* {!!ships.length && (
+            <React.Fragment>
+              <h4>⛴ {ships[0].name}</h4>
+              <p>{ships[0].port}</p>
+              <img src={ships[0].image} width="200" />
+            </React.Fragment>
+          )} */}
         </div>
       ))}
     </React.Fragment>
