@@ -4,7 +4,6 @@ import useFetch from 'fetch-suspense';
 
 export default function App() {
   const launchesPast = useFetch('https://api.spacex.land/rest/launches-past');
-  console.log('launchesPast: ', launchesPast);
 
   return (
     <React.Fragment>
