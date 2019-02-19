@@ -2,8 +2,10 @@ import * as React from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from 'react-apollo-hooks';
 import { GetLaunches } from '../types/types';
+import useFetch from 'fetch-suspense';
 
 export default function App() {
+  const launchesPastRest = useFetch('http://localhost:4000/rest/launches-past');
   const {
     data: { launchesPast }
   } = useQuery<GetLaunches.Query>(query);
