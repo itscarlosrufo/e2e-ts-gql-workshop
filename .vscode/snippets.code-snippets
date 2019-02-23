@@ -26,8 +26,6 @@
       "- ts-node/register",
       "generates:",
       "./src/types/types.d.ts:",
-      "config:",
-      "contextType: ./context#MyContext",
       "plugins:",
       "- typescript-common",
       "- typescript-server",
