@@ -1,7 +1,6 @@
 import { collection } from '../utils';
-import { QueryResolvers } from '../../../types/types';
 
-export const Query: QueryResolvers.Resolvers = {
+export const Query = {
   dragons: async (obj, { limit, offset }, context) => {
     const data = await context.db
       .collection(collection)

@@ -1,7 +1,6 @@
 import { collection, parseShips } from './utils';
-import { QueryResolvers } from '../../types/types';
 
-const Query: QueryResolvers.Resolvers = {
+const Query = {
   ships: async (obj, { find, offset, order, sort, limit }, context) => {
     const data = await context.db
       .collection(collection)

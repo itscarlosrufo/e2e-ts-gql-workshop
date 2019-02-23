@@ -1,8 +1,7 @@
 import { parseCores } from './utils';
-import { QueryResolvers } from '../../types/types';
 
 const collection = 'core';
-const Query: QueryResolvers.Resolvers = {
+const Query = {
   cores: async (obj, { find, offset, order, sort, limit }, context) => {
     let null_dates = [];
     if (!find || (find && !find.original_launch)) {

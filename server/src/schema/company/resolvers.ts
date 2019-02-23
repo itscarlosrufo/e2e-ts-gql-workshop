@@ -1,7 +1,5 @@
-import { QueryResolvers } from '../../types/types';
-
 const collection = 'info';
-const Query: QueryResolvers.Resolvers = {
+const Query = {
   company: async (obj, args, context) => {
     const [data] = await context.db
       .collection(collection)

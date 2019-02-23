@@ -1,7 +1,6 @@
-import { QueryResolvers } from '../../../types/types';
 import { collection, parseLaunchpad } from '../utils';
 
-export const Query: QueryResolvers.Resolvers = {
+export const Query = {
   launchpads: async (obj, { limit, offset }, context) => {
     const data = await context.db
       .collection(collection)
