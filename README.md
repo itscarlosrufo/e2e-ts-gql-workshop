@@ -1,10 +1,10 @@
-# End-to-end Type-Safe GraphQL Apps - Sevilla TypeScript
+# End-to-end Type-Safe GraphQL Apps - TypeScript NYC
 🚀 SpaceX's GraphQL-REST APIs &amp; UI Demo
 
-🕹https://github.com/swcarlosrj/end-to-end-type-safe-graphql-apps-sevilla-typescript
+🕹https://github.com/swcarlosrj/end-to-end-type-safe-graphql-apps-typescript-nyc
 
-🗣https://slides.com/carlosrufo/end-to-end-type-safe-graphql-apps-sevilla-typescript
+🗣https://slides.com/carlosrufo/end-to-end-type-safe-graphql-apps-typescript-nyc
 
-No dudéis en contactar con cualquier duda!
+Don't hesitate to contact if you'd have any doubt!
 
-Gracias por asistir 😄
+Thanks for coming 😄
