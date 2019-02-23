@@ -15,9 +15,12 @@
   // 	],
   // 	"description": "Log output to console"
   // }
-
-  "codeyen": {
-    "prefix": "codeyen",
+  "codegen-install": {
+    "prefix": "codegen-install",
+    "body": "yarn add -D graphql-code-generator@0.16.0 graphql-codegen-typescript-common@0.16.0 graphql-codegen-typescript-resolvers@0.16.0 graphql-codegen-typescript-server@0.16.0"
+  },
+  "codegen-config": {
+    "prefix": "codegen-config",
     "body": [
       "schema: src/schema/**/*.ts",
       "overwrite: true",
