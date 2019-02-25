@@ -13,6 +13,7 @@
 
 🗣 https://slides.com/carlosrufo/end-to-end-type-safe-graphql-apps-typescript-nyc
 
-Don't hesitate to contact if you'd have any question!
+# 😄 Thanks for coming
 
-Thanks for coming 😄
+Don't hesitate to contact [@swcarlosrj](https://twitter.com/swcarlosrj) if you'd have any question!
+
