@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "graphql-code-generator": "0.16.0",
+    "graphql-codegen-typescript-common": "0.16.0",
+    "graphql-codegen-typescript-resolvers": "0.16.0",
+    "graphql-codegen-typescript-server": "0.16.0"
+  }
+}
