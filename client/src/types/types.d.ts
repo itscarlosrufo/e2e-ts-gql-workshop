@@ -292,8 +292,6 @@ export namespace GetLaunches {
   export type LaunchesPast = {
     __typename?: "Launch";
 
-    is_tentative: Maybe<boolean>;
-
     mission_name: Maybe<string>;
 
     details: Maybe<string>;
