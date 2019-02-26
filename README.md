@@ -13,7 +13,7 @@
 
 # Slides
 
-🗣 https://slides.com/carlosrufo/end-to-end-type-safe-graphql-apps-typescript-nyc
+🗣 https://slides.com/swcarlosrj/end-to-end-type-safe-graphql-apps-typescript-nyc
 
 # 😄 Thanks for coming
 
