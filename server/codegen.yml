@@ -4,7 +4,7 @@ watch: true
 require:
   - ts-node/register
 generates:
-  ./src/types.d.ts:
+  ./src/types/types.d.ts:
     plugins:
       - typescript-common
       - typescript-server
