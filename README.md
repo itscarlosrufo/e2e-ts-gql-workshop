@@ -11,10 +11,6 @@
 
 📟 4: `cd client && yarn generate`
 
-# Slides
-
-🗣 https://slides.com/swcarlosrj/end-to-end-type-safe-graphql-apps
-
 # 😄 Thanks for coming
 
 Don't hesitate to contact [@swcarlosrj](https://twitter.com/swcarlosrj) if you'd have any question!
