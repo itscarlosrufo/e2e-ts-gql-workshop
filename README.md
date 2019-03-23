@@ -1,5 +1,5 @@
-# End-to-end Type-Safe GraphQL Apps - TypeScript NYC
-🚀 SpaceX's GraphQL-REST APIs &amp; UI Demo
+# End-to-end Type-Safe GraphQL Workshop
+🚀 SpaceX's GraphQL API & UI
 
 # Installation
 
