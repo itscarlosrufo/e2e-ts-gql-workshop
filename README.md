@@ -32,8 +32,14 @@ Get introduced to the marvellous GraphQL universe! Discover all the benefits for
 
 **👍 Essentials**
 
-- Node. Latest LTS Version (10.15.3).
-- Git. Latest LTS Version (2.21.0).
+- [Node](https://nodejs.org/en/). Latest LTS Version (10.15.3).
+- [Git](https://git-scm.com/downloads). Latest LTS Version (2.21.0).
+- [Github](https://github.com/). You just need to create an account!
+
+**🤙 Nice to have**
+
+- [VSCode](https://code.visualstudio.com/)
+- [CodeCopy](https://github.com/zenorocha/codecopy)
 
 ---
 
@@ -43,7 +49,7 @@ Open a terminal
 
 Fork and clone this repository
 ```
-git clone https://github.com/${👩‍💻👨‍💻}/end-to-end-type-safe-graphql-workshop
+git clone https://github.com/${👩‍💻👨‍💻}/e2e-ts-gql-workshop
 ```
 
 Navigate to the created folder
