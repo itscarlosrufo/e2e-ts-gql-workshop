@@ -12,6 +12,7 @@ Get introduced to the marvellous GraphQL universe! Discover all the benefits for
 - Understand Why, How & What's GraphQL
 - Create a J/TS GraphQL Server
 - Create a J/TS GraphQL Client
+- Contribute with Open Source
 
 # 🗓 Agenda
 
@@ -31,37 +32,32 @@ Get introduced to the marvellous GraphQL universe! Discover all the benefits for
 
 **👍 Essentials**
 
-- Node
-- Git
-
-**🤙 Nice to have**
-
-- VSCode
-  - GraphQL for VSCode
-  - Apollo GraphQL
+- Node. Latest LTS Version (10.15.3).
+- Git. Latest LTS Version (2.21.0).
 
 ---
 
 # 🌏 Intro
 
-Fork the repository
-Clone forked repository
+Open a terminal
 
+Fork and clone this repository
 ```
 git clone https://github.com/${👩‍💻👨‍💻}/end-to-end-type-safe-graphql-workshop
 ```
 
-Navigate to folder
-
+Navigate to the created folder
 ```
-cd end-to-end-type-safe-graphql-workshop
+cd e2e-ts-gql-workshop
 ```
 
 ---
 
 # 🚀 Server
 
-Summary
+Time -0, it'll be time to liftoff creating (from scratch) a GraphQL Server. TypeDefs, resolvers & context will be the boosters of the GraphQL JS implementation. Then, we'll take all the advantages of having a strongly typed GraphQL Schema to auto-generate the TypeScript types based on our GraphQL type definitions!
+
+## Summary
 
 - S0: JS GraphQL Server Demo
 - S1: JS GraphQL Server
@@ -93,7 +89,8 @@ mkdir server
 Create index.js inside the server folder
 
 ```
-cd server && touch index.js
+cd server
+touch index.js
 ```
 
 ### 🎮 Implement JS GraphQL Server
