@@ -1,11 +1,12 @@
 # 👨‍💻 End-to-end Type-Safe GraphQL Workshop
+
 <p align="center">
 <a href="https://github.com/swcarlosrj/e2e-ts-gql-workshop/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 <a href="https://github.com/swcarlosrj/e2e-ts-gql-workshop/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>  
 <a href="https://spectrum.chat/e2e-ts-gql-workshop"><img src="https://withspectrum.github.io/badge/badge.svg"></a>
 </p>
 
-Get introduced to the marvellous GraphQL universe! Discover all the benefits for adding End-to-end Type-Safety to your GraphQL App taking all the advantages of TypeScriot, GraphQL & React working together. Apollo, auto-gen Types & Hooks would build the pillars of a SpaceX demo 🛰
+Get introduced to the marvellous GraphQL universe! Discover all t`he benefits for adding End-to-end Type-Safety to your GraphQL App taking all the advantages of TypeScriot, GraphQL & React working together. Apollo, auto-gen Types & Hooks would build the pillars of a SpaceX demo 🛰
 
 # 🎯 Goals
 
@@ -38,8 +39,8 @@ Get introduced to the marvellous GraphQL universe! Discover all the benefits for
 
 **🤙 Nice to have**
 
-- [VSCode](https://code.visualstudio.com/)
-- [CodeCopy](https://github.com/zenorocha/codecopy)
+- [VSCode](https://code.visualstudio.com/). The futuristic J/TS IDE!
+- [CodeCopy](https://github.com/zenorocha/codecopy). Copy to clipboard on markdown.
 
 ---
 
@@ -48,11 +49,13 @@ Get introduced to the marvellous GraphQL universe! Discover all the benefits for
 Open a terminal
 
 Fork and clone this repository
+
 ```
 git clone https://github.com/${👩‍💻👨‍💻}/e2e-ts-gql-workshop
 ```
 
 Navigate to the created folder
+
 ```
 cd e2e-ts-gql-workshop
 ```
@@ -80,19 +83,19 @@ Summary
 
 ### 📦 Create folder structure
 
-Checkout first step
+👉 Checkout first step
 
 ```
 git checkout server-step-0
 ```
 
-Create server folder
+👍 Create server folder
 
 ```
 mkdir server
 ```
 
-Create index.js inside the server folder
+👌 Create index.js inside the server folder
 
 ```
 cd server
@@ -101,7 +104,7 @@ touch index.js
 
 ### 🎮 Implement JS GraphQL Server
 
-Declare typeDefs
+👉 Declare typeDefs
 
 ```javascript
 const typeDefs = gql`
@@ -128,7 +131,7 @@ type Launch {
 `;
 ```
 
-Declare resolvers
+👉 Declare resolvers
 
 ```javascript
 const resolvers = {
@@ -140,7 +143,7 @@ const resolvers = {
 };
 ```
 
-Declare server
+👉 Declare server
 
 ```javascript
 const server = new ApolloServer({
@@ -149,19 +152,19 @@ const server = new ApolloServer({
 });
 ```
 
-Call server
+👉 Call server
 
 ```javascript
 server.listen().then(({ url }) => console.log(`🚀 Server ready at: ${url}`));
 ```
 
-Import mock data from [here](https://gist.github.com/swcarlosrj/0893f6a55055819943346bb719d3a34b)
+👍 Import [mock data](https://gist.github.com/swcarlosrj/0893f6a55055819943346bb719d3a34b)
 
 ```javascript
 const launches = [...]
 ```
 
-Add dependencies
+👌 Add dependencies
 
 ```javascript
 const gql = require("graphql-tag");
@@ -170,20 +173,19 @@ const { ApolloServer } = require("apollo-server");
 
 ### ⚡️ Run Server
 
-Install dependencies
+👉 Install dependencies
 
 ```
 npm install graphql apollo-server
 ```
 
-Run server
+👍 Run server
 
 ```
 node ./index.js
 ```
 
-Explore GraphQL API 👉
-[http://localhost:4000/](http://localhost:4000/)
+👌 Explore GraphQL API [http://localhost:4000/](http://localhost:4000/)
 
 If everything went well, commit your changes!
 
@@ -200,29 +202,29 @@ Summary
 
 ### 🧐 Explore the DB
 
-Open https://www.humongous.io/
+👉 Open [Humongous](https://www.humongous.io/)
 
-Login on `Get Started` and choose your MongoDB fav hosting provider
+👉 Login on `Get Started` and choose your fav MongoDB hosting provider
 
-Paste the SpaceX Public DB
+👉 Paste the SpaceX Public DB link
 
 ```
 mongodb+srv://public:spacex@spacex-gcp-gpg0u.gcp.mongodb.net/spacex-api
 ```
 
-Click Next & Create Project
+👍 Click Next & Create Project
 
-Explore all the data collections
+👌 Explore all the data collections
 
 ### 🕹 Create DB connector
 
-Create db.js file
+👉 Create db.js file
 
 ```
 touch db.js
 ```
 
-Connect to DB
+👉 Connect to DB
 
 ```javascript
 const url =
@@ -242,13 +244,13 @@ module.exports = {
 };
 ```
 
-Add `mongodb` dependendy
+👍 Add `mongodb` dependendy
 
 ```javascript
 const MongoClient = require("mongodb");
 ```
 
-Install `mongodb` dependency
+👌 Install `mongodb` dependency
 
 ```
 npm install mongodb
@@ -256,7 +258,7 @@ npm install mongodb
 
 ### 💫 Adapt server & resolvers
 
-Adapt our server replacing the current server implementation & run for:
+👉 Adapt our server replacing the current server implementation & run for:
 
 ```javascript
 (async () => {
@@ -272,13 +274,13 @@ Adapt our server replacing the current server implementation & run for:
 })();
 ```
 
-Import the DB
+👉 Import the DB
 
 ```javascript
 const { getDB } = require("./db");
 ```
 
-Implement resolvers replacing the current by this:
+👉 Implement resolvers replacing the current by this:
 
 ```javascript
 const resolvers = {
@@ -303,9 +305,9 @@ const resolvers = {
 };
 ```
 
-Remove launches on index.js
+👍 Remove launches on `index.js`
 
-Run the server & explore real data (refresh your browser)
+👌Run the server & explore real data _(refresh your browser)_
 
 ```
 node ./index.js
@@ -313,7 +315,7 @@ node ./index.js
 
 ### ♻️ Underfetching
 
-Add `rocket` to LaunchRocket
+👉 Add `rocket` to LaunchRocket
 
 ```graphql
 type LaunchRocket {
@@ -322,7 +324,7 @@ type LaunchRocket {
 }
 ```
 
-Include the `Rocket` type
+👉 Include the `Rocket` type
 
 ```graphql
 type Rocket {
@@ -333,7 +335,7 @@ type Rocket {
 }
 ```
 
-Include the `LaunchRocket` resolver
+👍 Add the `LaunchRocket` resolver
 
 ```javascript
 const resolvers = {
@@ -352,9 +354,9 @@ const resolvers = {
 }
 ```
 
-_Look what you're getting on obj (don't forget to remove the console.log)_
+_Look 👀 what you're getting on `obj` (don't forget to remove the console.log)_
 
-Run the server & explore real data (refresh your browser)
+👌 Run the server & explore real data (refresh your browser)
 
 ```
 node ./index.js
@@ -368,24 +370,24 @@ In this step will generate
 
 ### 🤔 Explore API & Codebase
 
-Checkout
+👉 Checkout
 
 ```
 git checkout server-step-2
 ```
 
-Install dependencies & run the server
+👉 Install dependencies & run the server
 
 ```
 npm install && npm run dev
 ```
 
-Explore the API
+👉 Explore the API
 [http://localhost:4000](http://localhost:4000)
 
-Explore the codebase
+👍 Explore the codebase
 
-Try to understand how this query is being implemented
+👌 Try to understand how this query is being implemented
 
 ```graphql
 {
@@ -406,7 +408,7 @@ Try to understand how this query is being implemented
 
 ### 🎸 Evolve the API
 
-Add to Rocket typeDefs `rocketByName`
+👍 Add to Rocket typeDefs `rocketByName`
 
 ```javascript
 extend type Query {
@@ -415,7 +417,7 @@ extend type Query {
 }
 ```
 
-Add its resolver
+👌 Add its resolver
 
 ```javascript
 rocketByName: async (obj, { name }, context) => {
@@ -432,13 +434,13 @@ If everything went well, commit your changes, else hit me up!
 
 ### 🎶 Generate TS types
 
-Create `codegen.yml` file
+👉 Create `codegen.yml` file
 
 ```
 touch codegen.yml
 ```
 
-Include this
+👉 Include the configuration
 
 ```
 schema: src/schema/**/*.ts
@@ -456,28 +458,28 @@ generates:
       - typescript-resolvers
 ```
 
-Install dependencies
+👉 Install dependencies
 
 ```
 npm install graphql-code-generator@0.16.0 graphql-codegen-typescript-common@0.16.0 graphql-codegen-typescript-resolvers@0.16.0 graphql-codegen-typescript-server@0.16.0
 ```
 
-Install dependencies
+👉 Install dependencies
 
 ```
 npm install
 ```
 
-Open 1 terminal
+👉 Open a terminal and run
 
 ```
 npm run dev
 ```
 
-Explore the API
+👉 Explore the API
 [http://localhost:4000](http://localhost:4000)
 
-Try to fetch rockets by IDs
+👉 Try to fetch `rockets` by IDs
 
 ```graphql
 {
@@ -488,17 +490,17 @@ Try to fetch rockets by IDs
 }
 ```
 
-Open 2 terminal
+👉 Open another terminal and run
 
 ```
 npm run gql-gen
 ```
 
-Explore types/types.d.ts file
+👉 Explore `types/types.d.ts` file
 
-Commit the changes
+👉 Commit the changes
 
-Type your rocket's resolvers
+👍 Type your `rocket`'s resolvers
 
 ```javascript
 const Query: QueryResolvers.Resolvers = {
@@ -506,11 +508,11 @@ const Query: QueryResolvers.Resolvers = {
 }
 ```
 
-Fix rockets by IDs
+👌 Fix rockets by IDs
 
 ### 🎻 Evolve Safely the API
 
-Add again to the Rocket typeDefs `rocketByName`
+👉 Add again to the Rocket typeDefs `rocketByName`
 
 ```graphql
   extend type Query {
@@ -519,9 +521,9 @@ Add again to the Rocket typeDefs `rocketByName`
   }
 ```
 
-Explore the types/types.d.ts file changes
+👉 Explore the `types/types.d.ts` file changes
 
-Add again its resolver
+👍 Add again it resolver
 
 ```javascript
 rocketByNome: async (obj, { nome }, context) => {
@@ -534,28 +536,29 @@ rocketByNome: async (obj, { nome }, context) => {
 };
 ```
 
-With the help of TypeScript, fix it and test it!
+👌 With the help of TypeScript, fix and test it!
 
 ## Step 👽 Create a REST API based on GraphQL
 
-Checkout
+👉 Checkout
 
 ```
 git checkout server-step-5
 ```
 
-Install dependencies & run the server
+👉 Install dependencies & run the server
 
 ```
-npm install && npm run dev
+npm install
+npm run dev
 ```
 
-Explore the GraphQL API
+👍 Explore the GraphQL API
 [http://localhost:4000/graphql](http://localhost:4000/graphql)
-Explore the REST API
+🤙 Explore the REST API
 [http://localhost:4000/rest](http://localhost:4000/rest)
 
-Explore the codebase
+👌 Explore the codebase
 Take a look at the _servers_ folder, the rest is same that last step!
 
 GraphQL 💜 REST
@@ -564,7 +567,9 @@ GraphQL 💜 REST
 
 # 🌖 Client
 
-Summary
+Approaching landing... we will create a React-Apollo client in JS (using hooks, of course). Later on we will evolve it safely generating the TypeScript types from our GraphQL documents!
+
+## Summary
 
 - S0: JS REST Client
 - S1: JS GraphQL Client
@@ -574,19 +579,19 @@ Summary
 
 ### 📦 Create folder structure
 
-Checkout first step
+👉 Checkout first step
 
 ```
 git checkout client-step-0
 ```
 
-Install create-react-app
+👍 Install create-react-app
 
 ```
 npm install --global create-react-app
 ```
 
-Create client folder
+👌 Create client folder
 
 ```
 create-react-app client
@@ -594,7 +599,7 @@ create-react-app client
 
 ### 🌟 Fetch Data
 
-Change your `App` component as follow:
+👌 Change your `App` component as follow:
 
 ```javascript
 function App() {
