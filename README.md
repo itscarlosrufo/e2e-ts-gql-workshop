@@ -504,49 +504,28 @@ npm install graphql-code-generator@0.16.0 graphql-codegen-typescript-common@0.16
 npm install
 ```
 
-👉 Open a terminal and run
+👍 Open a terminal and run
 
 ```
 npm run dev
 ```
 
-👉 Explore the API
+👌 Explore the API
 [http://localhost:4000](http://localhost:4000)
 
-👉 Try to fetch `rockets` by IDs
-
-```graphql
-{
-  rocket(ID: "falcon1") {
-    id
-    name
-  }
-}
-```
-
-👉 Open another terminal and run
+👍 Open another terminal and run
 
 ```
-npm run gql-gen
+npm run generate
 ```
 
-👉 Explore `types/types.d.ts` file
+👌 Explore `types/types.d.ts` file
 
-👉 Commit the changes
-
-👍 Type your `rocket`'s resolvers
-
-```javascript
-const Query: QueryResolvers.Resolvers = {
-  ...
-}
-```
-
-👌 Fix rockets by IDs
+ Commit the changes
 
 ### 🎻 Evolve Safely the API
 
-👉 Add again to the Rocket typeDefs `rocketByName`
+👉 Add again `rocketByName` into the Rocket typeDefs
 
 ```graphql
   extend type Query {
@@ -557,7 +536,7 @@ const Query: QueryResolvers.Resolvers = {
 
 👉 Explore the `types/types.d.ts` file changes
 
-👍 Add again it resolver
+👉 Add again it resolver
 
 ```javascript
 rocketByNome: async (obj, { nome }, context) => {
@@ -567,10 +546,23 @@ rocketByNome: async (obj, { nome }, context) => {
     .limit(1)
     .toArray();
   return data;
-};
+}
 ```
 
-👌 With the help of TypeScript, fix and test it!
+👉 Type your `rocket`'s resolvers
+
+```javascript
+const Query: QueryResolvers.Resolvers = {
+  ...
+}
+```
+
+👍 Import the `QueryResolvers` type definitions
+```
+import { QueryResolvers } from "../../types/types";
+```
+
+👌 Fix rockets by name with the help of TypeScript!
 
 ## Step 👽 Create a REST API based on GraphQL
 
@@ -593,10 +585,11 @@ npm run dev
 [http://localhost:4000/rest](http://localhost:4000/rest)
 
 👌 Explore the codebase
-Take a look at the _servers_ folder, the rest is same that last step!
+Take a look at the _servers_ folder, excluding that folder eveything is same than last step!
 
-GraphQL 💜 REST
-
+<p align="center">
+    <b>GraphQL 💜 REST</b>
+</p>
 ---
 
 # 🌖 Client
