@@ -590,6 +590,7 @@ Take a look at the _servers_ folder, excluding that folder eveything is same tha
 <p align="center">
     <b>GraphQL 💜 REST</b>
 </p>
+
 ---
 
 # 🌖 Client
