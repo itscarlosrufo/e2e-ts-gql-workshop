@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 const typeDefs = gql`
   extend type Query {
     rockets(limit: Int, offset: Int): [Rocket]
-    rocket(ID: ID!): Rocket
+    rocket(id: ID!): Rocket
   }
 
   type Rocket {
