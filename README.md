@@ -110,14 +110,14 @@ Let's implement a demo GraphQL server in our `index.js`
 
 ```javascript
 const typeDefs = gql`
-# Entry Points
-type Query {
+  # Entry Points
+  type Query {
     launches: [Launch]
     launch(id: Int!): Launch
-}
+  }
 
-# Types
-type Launch {
+  # Types
+  type Launch {
     flight_number: Int!
     mission_name: String!
     details: String
@@ -465,7 +465,6 @@ npm install
 npm run dev
 ```
 
-
 👉 Create `codegen.yml` file
 
 ```
@@ -521,7 +520,7 @@ npm run generate
 
 👌 Explore `types/types.d.ts` file
 
- Commit the changes
+Commit the changes
 
 ### 🎻 Evolve Safely the API
 
@@ -546,7 +545,7 @@ rocketByNome: async (obj, { nome }, context) => {
     .limit(1)
     .toArray();
   return data;
-}
+};
 ```
 
 👉 Type your `rocket`'s resolvers
@@ -558,6 +557,7 @@ const Query: QueryResolvers.Resolvers = {
 ```
 
 👍 Import the `QueryResolvers` type definitions
+
 ```
 import { QueryResolvers } from "../../types/types";
 ```
@@ -628,6 +628,7 @@ create-react-app client
 ### ⭐️ Setup Suspense
 
 👉 Add `Suspense` into your `index.js` ReactDom.render:
+
 ```javascript
 ReactDOM.render(
   <Suspense fallback="Loading...">
@@ -638,6 +639,7 @@ ReactDOM.render(
 ```
 
 👉 Import `Suspense`:
+
 ```
 import { Suspense } from 'react';
 ```
@@ -645,6 +647,7 @@ import { Suspense } from 'react';
 ### 💫 Fetch data from REST
 
 👉 Change your `App` component as follow:
+
 ```javascript
 function App() {
   const launchesPast = useFetch("https://api.spacex.land/rest/launches-past");
@@ -665,11 +668,13 @@ function App() {
 ```
 
 👉 Import `useFetch`
+
 ```javascript
-import useFetch from 'fetch-suspense';
+import useFetch from "fetch-suspense";
 ```
 
 👉 Install `fetch-suspense`
+
 ```
 npm install fetch-suspense
 ```
@@ -683,13 +688,12 @@ npm start
 
 👌 Explore the Client [http://localhost:3000](http://localhost:3000)
 
-
 ## Step 1️⃣ JS GraphQL Client
 
 ### 🌟 Setup GraphQL Client
 
-
 👉 Create new Apollo Client
+
 ```javascript
 const client = new ApolloClient({
   uri: "http://api.spacex.land/graphql"
@@ -708,6 +712,7 @@ ReactDOM.render(
   document.getElementById('root') as HTMLElement
 );
 ```
+
 👍 Import dependencies
 
 ```javascript
@@ -721,10 +726,10 @@ import ApolloClient from "apollo-boost";
 npm install react-apollo-hooks apollo-boost
 ```
 
-
 ## ⚡️ Fetch data from GraphQL
 
 👉 Write the GraphQL query
+
 ```javascript
 const query = gql`
   query getLaunches {
@@ -743,6 +748,7 @@ const query = gql`
 ```
 
 👉 Add `useQuery` to fetch data from the GraphQL API
+
 ```javascript
 const launchesPastRest = useFetch("https://api.spacex.land/rest/launches-past");
 const {
@@ -751,6 +757,7 @@ const {
 ```
 
 👉 Import `useQuery`
+
 ```javascript
 import { useQuery } from "react-apollo-hooks";
 ```
@@ -817,13 +824,13 @@ function App() {
 
 ### 🎶 Generate TS types
 
-Create `codegen.yml` file
+👉 Create `codegen.yml` file
 
 ```
 touch codegen.yml
 ```
 
-Include this
+👉 Include the configuration
 
 ```
 schema: http://localhost:4000/graphql
@@ -838,35 +845,40 @@ generates:
       - typescript-client
 ```
 
-Install dependencies
+👉 Install `codegen` dependencies
 
 ```
 npm install graphql-code-generator@0.16.0 graphql-codegen-typescript-common@0.16.0 graphql-codegen-typescript-client@0.16.0
 ```
 
-Install dependencies
+👉 Install dependencies
 
 ```
 npm install
 ```
 
-Open 1 terminal
+👍 Open a terminal and run
 
 ```
-npm run start
+npm startdev
 ```
 
-Open 2 terminal
+👌 Explore the Client
+[http://localhost:3000](http://localhost:3000)
+
+👍 Open another terminal and run
 
 ```
 npm run generate
 ```
 
-Explore types/types.d.ts file
+👌 Explore `types/types.d.ts` file
 
 Commit the changes
 
-Type your returned data
+### 🎻 Evolve Safely the Client
+
+👉 Type your returned data
 
 ```typescript
 const {
@@ -874,11 +886,13 @@ const {
 } = useQuery<GetLaunches.Query>(query);
 ```
 
+👉 Import `GetLaunches` type definition
+
 ```javascript
 import { GetLaunches } from "../types";
 ```
 
-### 🎻 Evolve Safely the Client
+👍 Add the `ships` field to the query
 
 ```javascript
 const query = gql`
@@ -895,6 +909,8 @@ const query = gql`
   }
 `;
 ```
+
+👌 Display the `ships` with the help of TypeScript auto-completion!
 
 ```javascript
 return (
@@ -919,9 +935,9 @@ return (
 
 ## Step 👽 Introspect API from the IDE
 
-Install Apollo GraphQL VS Code extension
+👉 Install [Apollo GraphQL](https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo) VS Code extension
 
-Create `apollo.config.js` file:
+👍 Create `apollo.config.js` file:
 
 ```javascript
 module.exports = {
@@ -933,7 +949,7 @@ module.exports = {
 };
 ```
 
-Press `Ctrl + Space Bar` inside your query 🤯
+👌 Press `Ctrl + Space Bar` inside your query 🤯
 
 # 😄 Thanks for coming
 
