@@ -319,7 +319,7 @@ const resolvers = {
 node ./index.js
 ```
 
-👌 Explore explore real data through the GraphQL API _(refresh your browser)_ [http://localhost:4000/](http://localhost:4000/)
+👌 Explore explore **real data** through the GraphQL API _(refresh your browser)_ [http://localhost:4000/](http://localhost:4000/)
 
 ### ♻️ Underfetching implementation
 
@@ -362,15 +362,15 @@ const resolvers = {
 }
 ```
 
-_Look 👀 what you're getting on `obj` (don't forget to remove the console.log)_
-
 👌 Run the server & explore real data (refresh your browser)
 
 ```
 node ./index.js
 ```
 
-If everything went well, commit your changes!
+_Look 👀 what you're getting on `obj` (don't forget to remove the console.log)_
+
+**2/3 ✅**, creating APIs has never been easier, commit your changes and let's move on to the last step!
 
 ## Step 2️⃣ TS GraphQL Server
 
