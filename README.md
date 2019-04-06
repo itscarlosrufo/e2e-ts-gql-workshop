@@ -362,13 +362,13 @@ const resolvers = {
 }
 ```
 
-👌 Run the server & explore real data (refresh your browser)
+👌 Run the server & explore real data _(refresh your browser)_
 
 ```
 node ./index.js
 ```
 
-_Look 👀 what you're getting on `obj` (don't forget to remove the console.log)_
+_Look 👀 what you're getting on `obj` when asking for `launches { rocket { rocket { ... } } }` (don't forget to remove the console.log)_
 
 **2/3 ✅**, creating APIs has never been easier, commit your changes and let's move on to the last step!
 
@@ -387,7 +387,9 @@ git checkout server-step-2
 👉 Install dependencies & run the server
 
 ```
-npm install && npm run dev
+cd server
+npm install
+npm start
 ```
 
 👉 Explore the API
@@ -395,7 +397,7 @@ npm install && npm run dev
 
 👍 Explore the codebase
 
-👌 Try to understand how this query is being implemented
+👌 Try to understand how this query is being resolved
 
 ```graphql
 {
@@ -425,7 +427,7 @@ extend type Query {
 }
 ```
 
-👌 Add its resolver
+👌 Add it resolver
 
 ```javascript
 rocketByName: async (obj, { name }, context) => {
@@ -438,9 +440,31 @@ rocketByName: async (obj, { name }, context) => {
 };
 ```
 
-If everything went well, commit your changes, else hit me up!
+👍 Run server
+
+```
+node ./index.js
+```
+
+👌 Explore GraphQL API testing the new evolution _(refresh your browser)_ [http://localhost:4000/](http://localhost:4000/)
+
+If everything went well, commit your changes!
 
 ### 🎶 Generate TS types
+
+👉 Checkout
+
+```
+git checkout server-step-3
+```
+
+👉 Install dependencies & run the server
+
+```
+npm install
+npm run dev
+```
+
 
 👉 Create `codegen.yml` file
 
@@ -466,7 +490,9 @@ generates:
       - typescript-resolvers
 ```
 
-👉 Install dependencies
+⚠️ Indentation here is crucial!
+
+👉 Install `codegen` dependencies
 
 ```
 npm install graphql-code-generator@0.16.0 graphql-codegen-typescript-common@0.16.0 graphql-codegen-typescript-resolvers@0.16.0 graphql-codegen-typescript-server@0.16.0
