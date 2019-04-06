@@ -4,7 +4,8 @@
   "main": "./src/index.ts",
   "scripts": {
     "start": "ts-node ./src/index.ts",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "generate": "gql-gen"
   },
   "dependencies": {
     "apollo-server": "^2.4.0",
