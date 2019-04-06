@@ -104,6 +104,8 @@ touch index.js
 
 ### 🎮 Implement JS GraphQL Server
 
+Let's implement a demo GraphQL server in our `index.js`
+
 👉 Declare typeDefs
 
 ```javascript
