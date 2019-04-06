@@ -585,11 +585,11 @@ npm run dev
 [http://localhost:4000/rest](http://localhost:4000/rest)
 
 👌 Explore the codebase
-Take a look at the _servers_ folder, excluding that folder eveything is same than last step!
+Take a look at the `servers` folder, excluding that folder eveything is same than last step!
 
-<p align="center">
-    <b>GraphQL 💜 REST</b>
-</p>
+<h2 align="center">
+  GraphQL 💜 REST
+</h2>
 
 ---
 
@@ -762,21 +762,15 @@ const {
 import { useQuery } from "react-apollo-hooks";
 ```
 
-👍 Install dependencies & run the client
+👍 Explore the Client [http://localhost:3000](http://localhost:3000)
 
-```
-npm install
-npm start
-```
-
-👌 Explore the Client [http://localhost:3000](http://localhost:3000)
-
-👀 Open your browser inspector tool and look what `overfetching` looks like!
-https://twitter.com/swcarlosrj/status/1096002544411836416
+👌 Open your browser inspector tool and give a 👀 to both size & time GraphQL-REST calls!
 
 ## Step 2️⃣ TS GraphQL Client
 
 ### 🎸 Evolve the Client
+
+👉 Include `launch_success` field
 
 ```javascript
 const query = gql`
@@ -796,9 +790,25 @@ const query = gql`
 `;
 ```
 
+👉 Remove `useFetch` call and log the `query` to verify that `launch_success` is there
+
 ```javascript
 function App() {
   // const launchesPast = useFetch("https://api.spacex.land/rest/launches-past");
+  const {
+    data: { launchesPast }
+  } = useQuery(query);
+
+  console.log("launchesPast", launchesPast)
+
+  return (...);
+}
+```
+
+👍 Display `launch_success`
+
+```javascript
+function App() {
   const {
     data: { launchesPast }
   } = useQuery(query);
@@ -821,6 +831,8 @@ function App() {
   );
 }
 ```
+
+👌 Explore the Client to see the new field [http://localhost:3000](http://localhost:3000)
 
 ### 🎶 Generate TS types
 
@@ -860,7 +872,7 @@ npm install
 👍 Open a terminal and run
 
 ```
-npm startdev
+npm start
 ```
 
 👌 Explore the Client
@@ -874,7 +886,7 @@ npm run generate
 
 👌 Explore `types/types.d.ts` file
 
-Commit the changes
+Fantastic, we are almost done. Don't forget to commit the changes!
 
 ### 🎻 Evolve Safely the Client
 
