@@ -625,10 +625,26 @@ npm install --global create-react-app
 create-react-app client
 ```
 
-### 🌟 Fetch Data
+### ⭐️ Setup Suspense
 
-👌 Change your `App` component as follow:
+👉 Add `Suspense` into your `index.js` ReactDom.render:
+```javascript
+ReactDOM.render(
+  <Suspense fallback="Loading...">
+    <App />
+  </Suspense>
+  document.getElementById('root') as HTMLElement
+);
+```
 
+👉 Import `Suspense`:
+```
+import { Suspense } from 'react';
+```
+
+### 💫 Fetch data from REST
+
+👉 Change your `App` component as follow:
 ```javascript
 function App() {
   const launchesPast = useFetch("https://api.spacex.land/rest/launches-past");
@@ -648,15 +664,39 @@ function App() {
 }
 ```
 
+👉 Import `useFetch`
+```javascript
+import useFetch from 'fetch-suspense';
+```
+
+👉 Install `fetch-suspense`
+```
+npm install fetch-suspense
+```
+
+👍 Install dependencies & run the client
+
+```
+npm install
+npm start
+```
+
+👌 Explore the Client [http://localhost:3000](http://localhost:3000)
+
+
 ## Step 1️⃣ JS GraphQL Client
 
-###
+### 🌟 Setup GraphQL Client
 
+
+👉 Create new Apollo Client
 ```javascript
 const client = new ApolloClient({
   uri: "http://api.spacex.land/graphql"
 });
 ```
+
+👉 Include `ApolloProvider`
 
 ```javascript
 ReactDOM.render(
@@ -668,18 +708,23 @@ ReactDOM.render(
   document.getElementById('root') as HTMLElement
 );
 ```
+👍 Import dependencies
 
 ```javascript
 import { ApolloProvider } from "react-apollo-hooks";
 import ApolloClient from "apollo-boost";
 ```
 
-Install the dependencies
+👌 Install dependencies
 
 ```
 npm install react-apollo-hooks apollo-boost
 ```
 
+
+## ⚡️ Fetch data from GraphQL
+
+👉 Write the GraphQL query
 ```javascript
 const query = gql`
   query getLaunches {
@@ -697,6 +742,7 @@ const query = gql`
 `;
 ```
 
+👉 Add `useQuery` to fetch data from the GraphQL API
 ```javascript
 const launchesPastRest = useFetch("https://api.spacex.land/rest/launches-past");
 const {
@@ -704,11 +750,21 @@ const {
 } = useQuery(query);
 ```
 
+👉 Import `useQuery`
 ```javascript
 import { useQuery } from "react-apollo-hooks";
 ```
 
-Open your browser inspector tool and look what `overfetching` looks like!
+👍 Install dependencies & run the client
+
+```
+npm install
+npm start
+```
+
+👌 Explore the Client [http://localhost:3000](http://localhost:3000)
+
+👀 Open your browser inspector tool and look what `overfetching` looks like!
 https://twitter.com/swcarlosrj/status/1096002544411836416
 
 ## Step 2️⃣ TS GraphQL Client
@@ -878,16 +934,6 @@ module.exports = {
 ```
 
 Press `Ctrl + Space Bar` inside your query 🤯
-
-# Installation
-
-📟 1: `cd server && yarn && yarn dev`
-
-📟 2: `cd server && yarn generate`
-
-📟 3: `cd client && yarn && yarn start`
-
-📟 4: `cd client && yarn generate`
 
 # 😄 Thanks for coming
 
