@@ -110,13 +110,13 @@ Let's implement a demo GraphQL server in our `index.js`
 
 ```javascript
 const typeDefs = gql`
-// Entry Points
+# Entry Points
 type Query {
     launches: [Launch]
     launch(id: Int!): Launch
 }
 
-// Types
+# Types
 type Launch {
     flight_number: Int!
     mission_name: String!
@@ -189,20 +189,22 @@ node ./index.js
 
 👌 Explore GraphQL API [http://localhost:4000/](http://localhost:4000/)
 
-If everything went well, commit your changes!
+Well done 💪, commit your changes and let's get our hands dirty!
 
 ## Step 1️⃣ JS GraphQL Server
 
 In this step we will connect the server with a database and we'll neste resources
 
-Summary
+### Summary
 
 - Explore the DB
 - Create DB connector
 - Adapt server & resolvers
-- Underfetching
+- Underfetching implementation
 
 ### 🧐 Explore the DB
+
+Let's discover how to access to SpaceX real data 🔎
 
 👉 Open [Humongous](https://www.humongous.io/)
 
@@ -220,7 +222,9 @@ mongodb+srv://public:spacex@spacex-gcp-gpg0u.gcp.mongodb.net/spacex-api
 
 ### 🕹 Create DB connector
 
-👉 Create db.js file
+Now, we are gonna get rid of the mocks to use real data 🔥
+
+👉 Create `db.js` file
 
 ```
 touch db.js
@@ -260,7 +264,7 @@ npm install mongodb
 
 ### 💫 Adapt server & resolvers
 
-👉 Adapt our server replacing the current server implementation & run for:
+👉 Adapt our server on `index.js` replacing the current definition with:
 
 ```javascript
 (async () => {
@@ -282,7 +286,7 @@ npm install mongodb
 const { getDB } = require("./db");
 ```
 
-👉 Implement resolvers replacing the current by this:
+👉 Implement resolvers replacing the current with:
 
 ```javascript
 const resolvers = {
@@ -307,15 +311,17 @@ const resolvers = {
 };
 ```
 
-👍 Remove launches on `index.js`
+👉 Remove launches on `index.js`
 
-👌Run the server & explore real data _(refresh your browser)_
+👍 Run server
 
 ```
 node ./index.js
 ```
 
-### ♻️ Underfetching
+👌 Explore explore real data through the GraphQL API _(refresh your browser)_ [http://localhost:4000/](http://localhost:4000/)
+
+### ♻️ Underfetching implementation
 
 👉 Add `rocket` to LaunchRocket
 
