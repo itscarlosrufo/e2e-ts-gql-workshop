@@ -562,7 +562,7 @@ const Query: QueryResolvers.Resolvers = {
 import { QueryResolvers } from "../../types/types";
 ```
 
-👌 Fix rockets by name with the help of TypeScript!
+👌 Fix all the erros that you could find with the help of TypeScript!
 
 ## Step 👽 Create a REST API based on GraphQL
 
