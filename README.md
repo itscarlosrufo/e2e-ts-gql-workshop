@@ -193,7 +193,7 @@ Well done 💪, commit your changes and let's get our hands dirty!
 
 ## Step 1️⃣ JS GraphQL Server
 
-In this step we will connect the server with a database and we'll neste resources
+In this step we will connect the server with a database and we will implement an underfecthing solution
 
 ### Summary
 
@@ -374,7 +374,13 @@ _Look 👀 what you're getting on `obj` when asking for `launches { rocket { roc
 
 ## Step 2️⃣ TS GraphQL Server
 
-In this step will generate
+In this step will auto-generate TypeScript types based on our GraphQL implementation to make our API type safe
+
+### Sumary
+- Explore API & Codebase
+- Evolve the API
+- Generate TS types
+- Evolve Safely the API
 
 ### 🤔 Explore API & Codebase
 
@@ -489,7 +495,7 @@ generates:
       - typescript-resolvers
 ```
 
-⚠️ Indentation here is crucial!
+Indentation here is crucial!
 
 👉 Install `codegen` dependencies
 
@@ -520,7 +526,7 @@ npm run generate
 
 👌 Explore `types/types.d.ts` file
 
-Commit the changes
+Commit your changes and let's wrap this up!
 
 ### 🎻 Evolve Safely the API
 
@@ -591,6 +597,8 @@ Take a look at the `servers` folder, excluding that folder eveything is same tha
   GraphQL 💜 REST
 </h2>
 
+# 🎉 You're just finished all GraphQL Server steps, let's now learn about GraphQL Clients!
+
 ---
 
 # 🌖 Client
@@ -604,6 +612,11 @@ Approaching landing... we will create a React-Apollo client in JS (using hooks, 
 - S2: TS GraphQL Client
 
 ## Step 0️⃣ JS REST Client
+
+### Summary
+- Create folder structure
+- Setup Suspense
+- Fetch data from REST
 
 ### 📦 Create folder structure
 
@@ -690,6 +703,11 @@ npm start
 
 ## Step 1️⃣ JS GraphQL Client
 
+### Summary
+- Setup GraphQL Client
+- Fetch data from GraphQL
+-
+
 ### 🌟 Setup GraphQL Client
 
 👉 Create new Apollo Client
@@ -767,6 +785,11 @@ import { useQuery } from "react-apollo-hooks";
 👌 Open your browser inspector tool and give a 👀 to both size & time GraphQL-REST calls!
 
 ## Step 2️⃣ TS GraphQL Client
+
+### Summary
+- Evolve the Client
+- Generate TS types
+- Evolve Safely the Client
 
 ### 🎸 Evolve the Client
 
@@ -962,6 +985,8 @@ module.exports = {
 ```
 
 👌 Press `Ctrl + Space Bar` inside your query 🤯
+
+# 🎊 You're just finished all GraphQL Client steps, hoping that you've enjoyed & learned something new!
 
 # 😄 Thanks for coming
 
