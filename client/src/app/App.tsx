@@ -1,10 +1,12 @@
-import * as React from 'react';
-import gql from 'graphql-tag';
-import { useQuery } from 'react-apollo-hooks';
-import useFetch from 'fetch-suspense';
+import * as React from "react";
+import gql from "graphql-tag";
+import { useQuery } from "react-apollo-hooks";
+import useFetch from "fetch-suspense";
 
 export default function App() {
-  const launchesPastRest = useFetch('http://localhost:4000/rest/launches-past');
+  const launchesPastRest = useFetch(
+    "https://api.spacex.land/rest/launches-past"
+  );
   const {
     data: { launchesPast }
   } = useQuery(query);
