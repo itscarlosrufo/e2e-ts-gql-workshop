@@ -646,15 +646,15 @@ create-react-app client
 ReactDOM.render(
   <Suspense fallback="Loading...">
     <App />
-  </Suspense>
-  document.getElementById('root') as HTMLElement
+  </Suspense>,
+  document.getElementById("root")
 );
 ```
 
 👉 Import `Suspense`:
 
-```
-import { Suspense } from 'react';
+```javascript
+import React, { Suspense } from "react";
 ```
 
 ### 💫 Fetch data from REST
@@ -689,6 +689,7 @@ import useFetch from "fetch-suspense";
 👉 Install `fetch-suspense`
 
 ```
+cd client
 npm install fetch-suspense
 ```
 
@@ -706,11 +707,10 @@ npm start
 ### Summary
 - Setup GraphQL Client
 - Fetch data from GraphQL
--
 
 ### 🌟 Setup GraphQL Client
 
-👉 Create new Apollo Client
+👉 Create on `index.js` a new Apollo Client
 
 ```javascript
 const client = new ApolloClient({
@@ -727,7 +727,7 @@ ReactDOM.render(
       <App />
     </Suspense>
   </ApolloProvider>,
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root")
 );
 ```
 
@@ -741,12 +741,12 @@ import ApolloClient from "apollo-boost";
 👌 Install dependencies
 
 ```
-npm install react-apollo-hooks apollo-boost
+npm install react-apollo-hooks apollo-boost graphql
 ```
 
 ## ⚡️ Fetch data from GraphQL
 
-👉 Write the GraphQL query
+👉 Write on 'App.js' the GraphQL query
 
 ```javascript
 const query = gql`
@@ -770,7 +770,7 @@ const query = gql`
 ```javascript
 const launchesPastRest = useFetch("https://api.spacex.land/rest/launches-past");
 const {
-  data: { launchesPast }
+  data: { launchesPast = [] }
 } = useQuery(query);
 ```
 
@@ -778,11 +778,20 @@ const {
 
 ```javascript
 import { useQuery } from "react-apollo-hooks";
+import gql from "graphql-tag";
+```
+
+👉 Run the client again
+
+```
+npm start
 ```
 
 👍 Explore the Client [http://localhost:3000](http://localhost:3000)
 
 👌 Open your browser inspector tool and give a 👀 to both size & time GraphQL-REST calls!
+
+Commit your changes! It's time to finish the workshop off 💪
 
 ## Step 2️⃣ TS GraphQL Client
 
@@ -793,7 +802,13 @@ import { useQuery } from "react-apollo-hooks";
 
 ### 🎸 Evolve the Client
 
-👉 Include `launch_success` field
+👉 Checkout last step
+
+```
+git checkout client-step-2
+```
+
+👉 Include `launch_success` field into our query
 
 ```javascript
 const query = gql`
@@ -833,7 +848,7 @@ function App() {
 ```javascript
 function App() {
   const {
-    data: { launchesPast }
+    data: { launchesPast = [] }
   } = useQuery(query);
   return (
     <React.Fragment>
@@ -868,7 +883,7 @@ touch codegen.yml
 👉 Include the configuration
 
 ```
-schema: http://localhost:4000/graphql
+schema: https://api.spacex.land/graphql
 documents:
   - src/**/*.tsx
 overwrite: true
