@@ -6,7 +6,7 @@
 <a href="https://spectrum.chat/e2e-ts-gql-workshop"><img src="https://withspectrum.github.io/badge/badge.svg"></a>
 </p>
 
-Get introduced to the marvellous GraphQL universe! Discover all t`he benefits for adding End-to-end Type-Safety to your GraphQL App taking all the advantages of TypeScriot, GraphQL & React working together. Apollo, auto-gen Types & Hooks would build the pillars of a SpaceX demo 🛰
+Get introduced to the marvellous GraphQL universe! Discover all the benefits for adding End-to-end Type-Safety to your GraphQL App taking all the advantages of TypeScript, GraphQL & React working together. Apollo, auto-gen Types & Hooks would build the pillars of a SpaceX demo 🛰
 
 # 🎯 Goals
 
