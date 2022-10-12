@@ -8,7 +8,7 @@
     "generate": "gql-gen"
   },
   "dependencies": {
-    "apollo-server": "^2.14.2",
+    "apollo-server": "^2.25.4",
     "apollo-server-express": "^2.4.2",
     "express": "^4.16.4",
     "graphql": "^14.1.1",
